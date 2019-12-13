@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up</title>
+	<meta charset="UTF-8">
+	{% load static %}
+	<link href="{% static 'css/signup.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+
+<div class="main">
+	<div class="signup">
+		<h1>Sign Up</h1>
+	</div>
+
+	{% block content %}
+    <div method="POST" class="form-group">
+	{% csrf_token %}
+
+		<div class="form-username"><dt>{{ form.username.label_tag }}</dt></div>
+		<div class="pole-username">
+    <dd class="clearfix">{{ form.username }}
+		{% if form.username.errors %}<div class="myerrors clearfix">{{ form.username.errors }}</div>{% endif %} </dd>
+	</div>
+
+		<div class="form-email">
+			<dt>{{ form.email.label_tag }}</dt></div>
+    <dd class="clearfix">{{ form.email }}
+		{% if form.email.errors %}<div class="myerrors clearfix">{{ form.email.errors }}</div>{% endif %} </dd>
+	</div>
+		<div class="form-fname">
+			<dt>{{ form.first_name.label_tag }}</dt></div>
+    <dd class="clearfix">{{ form.first_name }}
+		{% if form.first_name.errors %}<div class="myerrors clearfix">{{ form.first_name.errors }}</div>{% endif %}
+	</dd> </div>
+		<div class="form-lname">
+			<dt>{{ form.last_name.label_tag }}</dt></div>
+    <dd class="clearfix">{{ form.last_name }}
+{% if form.last_name.errors %}<div class="myerrors clearfix">{{ form.last_name.errors }}</div>{% endif %}
+	</dd> </div>
+				<div class="form-password">
+					<dt>{{ form.password1.label_tag }}</dt></div>
+    <dd class="clearfix">{{ form.password1 }}
+{% if form.password1.errors %}<div class="myerrors clearfix">{{ form.password1.errors }}</div>{% endif %}
+	</dd> </div>
+				<div class="password2">
+					<dt>{{ form.password2.label_tag }}</dt></div>
+    <dd class="clearfix">{{ form.password2 }}
+{% if form.password1.errors %}<div class="myerrors clearfix">{{ form.password1.errors }}</div>{% endif %}
+	</dd> </div>
+<br>
+	<button type="submit" class="btn btn-success">Register</button>
+
+	</form>
+{% endblock %}
+</div>
+
+</body>
+</html>

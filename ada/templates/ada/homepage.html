@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="sales/">Sales <span class="sr-only">(current)</span></a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/accessories" class="btn  btn-sm">Accessories</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/sales">Home</a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0" class="btn btn-outline-secondary">
+        {% if user.is_authenticated %}
+
+           {{ user.username }}
+            <a href="{% url 'logout' %}">Log out</a>
+
+        {% else %}
+        <a class="btn btn-outline-secondary my-4 my-sm-0" href="{% url 'login' %}">Log in <span class="sr-only">(current)</span></a>
+        <a class="btn btn-outline-secondary my-5 my-sm-0" href="">Basket<span class="sr-only">(current)</span> </a>
+        {% endif %}
+    </form>
+  </div>
+</nav>
+<body>
+  <section class="bg-white">
+        <div class="title"><h1>The best online shop</h1>
+            <h3>Quality clothes, shoes and accessories</h3>
+        </div>
+        <div class="for">
+            <a href="/products" class="btn  btn-sm">
+                 <img src="{% static 'pictures/women.jpg' %}" class="wq" alt="">For women
+            </a>
+            <a href="/mens" class="btn  btn-sm">
+                <img src="{% static 'pictures/men.jpg' %}" class="du" alt=""> For men
+            </a>
+            <a href="/child" class="btn  btn-sm">
+                <img src="{% static 'pictures/child.jpg' %}" class="wq" alt="">Child clothes
+            </a>
+        </div>
+  </section>
+
+
+  <section class="bg-white">
+            <a href="/sales" class="btn  btn-sm">
+                 <img src="{% static 'pictures/mmm.jpeg' %}" class="wq" >
+            </a>
+
+  </section>
+
+
+
+
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-lg-offset-4">
+              <hr>
+                  Если у вас есть вопросы то можете написать нам на почту @bogini.sis1810@gmail.com  или позвонить по номеру : 8 (747)747-74-47
+              <hr>
+                   &copy; Все права защищены 2019
+          </div>
+      </div>
+  </div>
+
+
+</body>
+</html>
+

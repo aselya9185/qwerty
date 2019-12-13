@@ -1,0 +1,506 @@
+*{
+	padding:0;
+	margin: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	
+}
+body, html{
+    overflow-x: hidden;
+   
+}
+
+nav{
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+}
+#checkbox-menu{
+	display: none;
+}
+.menu {
+	padding: 0;
+	margin: 0;
+	height: 65px;
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+.menu li a{
+	color: #000;
+	text-decoration: none;
+	align-self: center;
+	font-size: 15px;
+	padding: 10px 15px;
+	transition: background .2s linear;
+}
+.menu li a:hover{
+	background: #ffcc01;
+	border-radius: 3px;
+}
+.logo{
+
+	font-size: 49px;
+	font-family: 'Bebas Neue', cursive;
+	margin-right: 55px;
+	color: #f56600;
+	background-color: white;
+	text-decoration: none;
+
+}
+.bbt{
+	width: 140px;
+	height: 50px;
+	margin-left: 24px;
+}
+.menu li a.contacts{
+	
+}
+.logo:hover{
+   background: white;
+}
+.sinie_polosy{
+	width: 100%
+	height: 200px;
+	background-color: #aebad2;
+	
+}
+.verh_polosa{
+	width: 100%;
+	height: 30px;
+	background-color: #22225e;
+	display: flex;
+	padding-top: 19px;
+	padding-bottom: 10px;
+	
+	flex-direction: row;
+	
+	list-style-type: none;
+	
+}
+#e1{
+	color: #22225e;
+	margin-left: 440px;
+	margin-right: 70px;
+	text-decoration: none;
+	padding: 9px 13px;
+	border-radius: 3px;
+	background-color: #ffb433;
+	transition: background .2s linear;
+}
+#e1:hover{
+	background: #ffb433;
+}
+
+.e22{
+	color: #22225e;
+	margin-right: 60px;
+	padding: 9px 13px;
+	background-color: #ccd5e3;
+	border-radius: 3px;
+	text-decoration: none;
+
+}
+
+
+#e3{
+	color: #22225e;
+	margin-right: 100px;
+	padding: 9px 13px;
+	background-color: #ccd5e3;
+	border-radius: 3px;
+	text-decoration: none;
+	transition: background .2s linear;
+}
+#e3:hover{
+	background: #ffb433;
+}
+
+
+.grayback{
+	width: 100%;
+	height: 1200px;
+	background-color: #e9eaed;
+	position: relative;
+}
+
+
+
+
+
+
+
+.Almaty-Nursultan{
+	width: 1020px;
+	height: 80px;
+	background: white;
+	position: absolute;
+	margin-left: 445px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.30);
+
+}
+#AN{
+	margin-left: 60px;
+	position: absolute;
+	margin-top: 24px;
+}
+#strelka{
+	font-size: 40px;
+	margin-top: 10px;
+	margin-left: 8px;
+	position: absolute;
+}
+#datavyezda{
+	position: absolute;
+	font-size: 13px;
+	margin-left: 60px;
+	margin-top: 41px;
+	color: #666;
+}
+#chislopoezdov{
+	position: absolute;
+	margin-left: 720px;
+	font-size: 14px;
+	margin-top: 28px;
+
+}
+
+.infoline{
+	width: 1020px;
+	height: 50px;
+	background: white;
+	position: absolute;
+	margin-top: 100px;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.30);
+}
+#i112,#i113, #i114, #i115, #i116{
+	position: absolute;
+	color: #666;
+
+}
+#i112{
+	margin-top: 18px;
+	margin-left: 10px;
+	font-size: 15px;
+}
+#i113{
+	margin-top: 18px;
+	margin-left: 335px;
+	font-size: 15px;
+}
+#i114{
+	margin-top: 18px;
+	margin-left: 515px;
+	font-size: 15px;
+}
+#i115{
+	margin-top: 18px;
+	margin-left: 675px;
+	font-size: 15px;
+}
+#i116{
+	margin-top: 18px;
+	margin-left: 810px;
+	font-size: 15px;
+}
+
+
+.results__item {
+	height: 181px;
+	width: 1020px;
+	position: absolute;
+	margin: 20px auto;
+	margin-top: 200px;
+	margin-left: 0px;
+	border: 1px solid #e9eaed;
+	background-color: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.30);
+}
+.results__item2 {
+	height: 181px;
+	width: 1020px;
+	position: absolute;
+	margin: 20px auto;
+	margin-top: 410px;
+	margin-left: 0px;
+	border: 1px solid #e9eaed;
+	background-color: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.30);
+}
+.results__item3 {
+	height: 181px;
+	width: 1020px;
+	position: absolute;
+	margin: 20px auto;
+	margin-top: 610px;
+	margin-left: 0px;
+	border: 1px solid #e9eaed;
+	background-color: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.30);
+}
+.results__item4 {
+	height: 181px;
+	width: 1020px;
+	position: absolute;
+	margin: 20px auto;
+	margin-top: 810px;
+	margin-left: 0px;
+	border: 1px solid #e9eaed;
+	background-color: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.30);
+}
+.results__item5 {
+	height: 181px;
+	width: 1020px;
+	position: absolute;
+	margin: 20px auto;
+	margin-top: 1016px;
+	margin-left: 0px;
+	border: 1px solid #e9eaed;
+	background-color: #fff;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.30);
+}
+
+.levyi_col {
+	width: 300px;
+
+	height: 125px;
+    border:1px solid #e9eaed;
+	position: absolute;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-top: 55px;
+
+}
+#bus-logo{
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	margin-left: 195px;
+	margin-top: 40px; 
+	
+}
+.pravyi_col {
+	width: 800px;
+	height: 151px;
+	
+	position: absolute;
+	margin-bottom: 20px;
+	margin-top: 25px;
+	margin-left: 350px;
+
+}
+.poehal_kakogo {
+	width: 100px;
+	height: 100px;
+	padding-top: 28px;
+	position: absolute;
+
+}
+.dlitelnost_ezdy {
+	width: 130px;
+	height: 151px;
+	padding-top: 28px;
+	margin-left: 150px;
+	
+	position: absolute;
+
+}
+.results_button1, .results__item-seats__button, .results__item-seats__button{
+	width: 70px;
+	height: 17px;
+	
+	margin-left: 50px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+	padding: 2px;
+	border-radius: 3px;
+	text-decoration: none;
+	background-color: #cc66ff;
+}
+
+	.results__item-route__duration {
+	    position: relative;
+	    display: block;
+	    max-width: 100px;
+	    height: 1px;
+	    margin-right: 5px auto 0;
+	    margin-top: 5px;
+	    margin-bottom: 5px;
+	    background-color: #aebad2;
+	}
+				    .results__item-route__duration:before {
+				    left: 0;
+			}
+			.results__item-route__duration:before, .results__item-route__duration:after {
+			    content: '';
+			    display: block;
+			    position: absolute;
+			    width: 9px;
+			    height: 9px;
+			    border: 1px solid #aebad2;
+			    background-color: #ffffff;
+			    margin-top: -5px;
+			    -webkit-border-radius: 9px;
+			    -moz-border-radius: 9px;
+			    -ms-border-radius: 9px;
+			    -o-border-radius: 9px;
+			    border-radius: 9px;
+			}
+			.results__item-route__duration:after {
+			    right: 0;
+			}
+			.results__item-route__duration:before, .results__item-route__duration:after {
+			    content: '';
+			    display: block;
+			    position: absolute;
+			    width: 9px;
+			    height: 9px;
+			    border: 1px solid #aebad2;
+			    background-color: #ffffff;
+			    margin-top: -5px;
+			    -webkit-border-radius: 9px;
+			    -moz-border-radius: 9px;
+			    -ms-border-radius: 9px;
+			    -o-border-radius: 9px;
+			    border-radius: 9px;
+			}
+
+.priehal_kakogo {
+	width: 100px;
+	height: 100px;
+	padding-top: 28px;
+	position: absolute;
+	margin-left: 325px;
+	
+}			
+
+.vybor_classa {
+	width: 355px;
+	height: 123px;
+	position: absolute;
+	margin-left: 450px;
+}
+
+
+footer{
+	width: 100%;
+	height: 267px;
+	background-color: #22225e;
+}
+.underfoot{
+	width: 100%;
+	height: 20px;
+	background-color: #aebad2;
+
+}
+.bbt2{
+	width: 200px;
+	height: 100px;
+	margin-top: 80px;
+	margin-left: 200px;
+	position: absolute;
+}
+
+.leftfoot{
+	position: relative;
+
+}
+.Get_Started{
+  position: absolute;
+  margin-left: 550px;
+  margin-top: 80px;
+}
+#getS{
+	color: #f56600;
+	margin-bottom: 10px;
+}
+#hom{
+	margin-bottom: 5px;
+	color: white;
+	text-decoration: none;
+	
+	transition: .2s linear;
+}
+#hom:hover{
+	color: #f56600 ;
+	background: white;
+	border-radius: 5px;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.About_Us{
+	position: absolute;
+	margin-left: 750px;
+	margin-top: 80px;
+}
+#abou{
+	color: #f56600;
+	margin-bottom: 10px;
+}
+#betw{
+	color: #22225e;
+}
+.Support{
+	position: absolute;
+	margin-left: 1000px;
+	margin-top: 80px;
+}
+.socIcons{
+ 
+ width: 
+
+}
+#log-face{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	margin-left: 1300px;
+	margin-top: 70px;
+	transition: .2s linear;
+
+}
+#log-twit{
+	width: 114px;
+	height: 64px;
+	position: absolute;
+	margin-left: 1380px;
+	margin-top: 78px;
+	transition: .2s linear;
+}
+#log-google{
+	width: 75px;
+	height: 75px;
+	margin-left: 1500px;
+	margin-top: 72px;
+	position: absolute;
+	transition: .2s linear;
+}
+#log-google:hover{
+	width: 80px;
+	height: 80px;
+	margin-top: 60px;
+	margin-left: 1495px;
+}
+#log-twit:hover{
+	width: 125px;
+	height: 75px;
+	margin-top: 70px;
+	margin-left: 1375px;
+}
+#log-face:hover{
+	width: 90px;
+	height: 90px;
+	margin-top: 60px;
+	margin-left: 1295px;
+}
+.allrights{
+	position: absolute;
+	margin-left: 195px;
+	margin-top: 200px;
+	color: white;
+}

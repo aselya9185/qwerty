@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+				{% load static %}
+		<link href="{% static 'css/style1.css' %}" rel="stylesheet">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>Bustickets</title>
+		<link href="{% static '	css/style1.css' %}" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div class="first" style="background-image: url({% static 'imgs/UQcAGn6gmbw.jpg' %})">
+		<header>
+			<nav>
+				<ul class="menu">
+					<li><a class="logo" href="#">BusTickets</a></li>
+					<li><a href="#">Главная</a></li>
+					<li><a class="contacts" href="#">Контакты</a></li>
+					<li><a href="#">Справка</a></li>
+					{% block content %}
+{% if user.is_authenticated %}
+  {{ user.username }}
+  <p><a href="{% url 'logout' %}">Выйти</a></p>
+{% else %}
+  <a href="{% url 'login' %}">Войти</a>
+{% endif %}
+					{% endblock %}
+					<li><a href="signup/">Регистрация</a></li>
+
+				</ul>
+			</nav>
+		</header>
+
+		<div class="block2">
+			<div><a id="id1" href="#">Автобус билеты </a></div>
+			<div><a class="id2" href="images/">Фото</a></div>
+			<div><a id="id3" href="#">Возврат билетов</a></div>
+		</div>
+		<div class="block3">
+			<div class=block31>
+				<li><input type="radio" class="form-radio" name="direction" value="1" id="one_side" checked="checked" />
+					<label class="label--form-radio" data-uil="one_side" data-uil="direction_oneway" for="one_side">В одну сторону</label>
+				</li>
+
+				<li><input type="radio" class="form-radio" name="direction" value="2" id="round_trip" />
+					<label class="label--form-radio" data-uil="round_trip" for="round_trip">В обе стороны</label>
+				</li>
+			</div>
+			<form action="/buses/" method="get">
+			<div class="block32">
+				<div class="from_name">
+				 <input id="name_as" type="text" name="from_name" class="search__form-input form-input text_input autocomplete" data-uil="start_point" data-direction="departure" data-minlength="2" value="" placeholder="Откуда"  z-index="0" />
+				 <svg class="icon-svg" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pin"></use></svg>
+<!--
+				 <a href="#" class="search__form-button button button--swap swap" data-uil="swap" z-index="1">
+					 <svg width="26" height="40"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-swap"></use></svg>
+				</a>
+-->
+				</div>
+				<div class= "to_name">
+				<input id="name_as" type="text" name="to_name" class="search__form-input form-input text_input validate_similar_stations autocomplete" data-uil="end_point" data-direction="arrival" data-minlength="2" value="" placeholder="Куда"  z-index="2" />
+				<svg class="icon-svg" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-pin"></use></svg>
+				</div>
+
+				<div class= "calendar">
+					<p>
+						<input id="name_as" type="date" max="2020-12-31" min="2019-12-03" name="dr">
+					</p>
+<!--
+					<input type="text" name="departure_date" id="departure_date" class="search__form-input form-input date_input js-datepicker" data-uil="start_date" data-action="gd-departure_date" data-max-date="+44D" autocomplete="off" placeholder="Дата" readonly="readonly" required="required" z-index="3" />
+					<img class="ui-datepicker-trigger" src="/img/transparent_radiobuttuon.png" alt="" title="">
+					<svg class="icon-svg" width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-datepicker"></use></svg>
+-->
+				</div>
+
+				<div class="search">
+					<button type="submit" class="search__form-button button main-search__btn btn" data-uil="submit_search" z-index="5" onclick="window.location="./Project2.html"">Найти</button>
+				</form>
+				</div>
+			</div>
+
+		</div>
+		</div>
+		<section>
+			<div class="block6">
+				<div class="identikit"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><path fill="#253064" d="M9.753 36.164l2.296 2.295a4.262 4.262 0 0 0 6.008 0l14.48-14.482L15.934 7.37 1.45 21.853a4.261 4.261 0 0 0 0 6.007l2.295 2.296a4.248 4.248 0 0 1 6.007 6.008m28.792-24.201L36.25 9.667a4.247 4.247 0 0 1-6.007 0 4.246 4.246 0 0 1 0-6.007l-2.296-2.296a4.26 4.26 0 0 0-6.008 0l-4.505 4.505L34.04 22.475l4.505-4.505a4.26 4.26 0 0 0 0-6.007"></path><path fill="#EF6C6E" d="M15.962 26.07a1.982 1.982 0 1 1-3.963.002 1.982 1.982 0 0 1 3.963-.002"></path><path fill="#FFF" d="M21.752 18.157a1.98 1.98 0 1 1-2.803 2.803 1.982 1.982 0 0 1 2.803-2.803"></path></g></svg></div>
+
+				<div class="iconable"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><path fill="#253064" d="M17 3.098h6V8h2V2c0-1.1-.9-2-2-2h-6c-1.1 0-2 .9-2 2v6h2V3.098zM27 10H13c-2.2 0-4 1.8-4 4v24h.02a2.29 2.29 0 0 0 2.271 2H13v-2h14v2h1.709a2.29 2.29 0 0 0 2.27-2H31V14c0-2.2-1.8-4-4-4z"></path><path fill="#EF6C6E" d="M24.867 24a1.867 1.867 0 1 1-3.734 0 1.867 1.867 0 0 1 3.734 0"></path><path fill="#FFF" d="M17.825 20.383l8.043-2.005-.88-3.525-8.042 2.005z"></path></g></svg></div>
+
+				<div class="icosahedra"><svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><path fill="#253064" d="M39.823 13.495c0-5.748-4.672-10.408-10.435-10.408-4.13 0-7.699 2.393-9.39 5.864a10.436 10.436 0 0 0-9.39-5.864C4.844 3.087.173 7.747.173 13.495c0 3.234 1.479 6.123 3.798 8.032l14.554 14.57c.81.81 2.136.81 2.946 0l14.558-14.573a10.377 10.377 0 0 0 3.794-8.03"></path><path fill="#EF6C6E" d="M27.44 13.494c0 1.074.873 1.943 1.949 1.943s1.947-.87 1.947-1.943a1.945 1.945 0 0 0-1.947-1.943c-1.076 0-1.948.87-1.948 1.943"></path></g></svg></div>
+
+				<div class="b111">
+					<p id="b1word"><b>Easy as 1, 2, 3</b></p>
+				   <p id="b1word">Choose the cheapest and fastest routes</p>
+					<p id="b1word">from over 800 official partners</p>
+					</div>
+				<div class="b222">
+					<p id="b2word"><b>Get there your way</b></p>
+				   <p id="b2word">Enjoy travelling by train, bus and flight</p>
+					 <p id="b2word"> across Kazahstan</p>
+					</div>
+				<div class="b333">
+					<p id="b3word"><b>Every time, anywhere</b></p>
+				   <p id="b3word">Because your trip doesn't end with a</p>
+					<p id="b3word">ticket, we’re here for you all the way</p>
+					</div>
+			</div>
+		</section>
+		
+			<div class="block7">
+				<h3 class="lead col-12">ПРЕИМУЩЕСТВА BusTickets</h3>
+			<div class="block71">
+				<img src="https://static.tickets.kz/svg/gd/icon-benefits-price.svg?6a6ae21927" alt="" class="benefits__img" height = 65 width = 55/>
+				<p class="benefits__title"><strong>Честные цены на Автобусных билетах в Казахстане</strong></p>
+				<p class="benefits__descr">Купить билеты на автобус без очереди и даже не выходя из дома? Легко! На Bustickets.kz можно купить билет онлайн без скрытых комиссий и сборов. Вы выбираете направление, класс вагона и места. Наша поисковая система предлагает варианты и наличие билетов на поезд, выгодные по цене и удобные по сообщению. Вам нужно только выбрать и забронировать билет на любое направление, где ходят Автобуса Казахстан. Оплатить можно банковской картой или другим удобным способом. Для удобства путешественников есть мобильное приложение Bustickets.kz на Android и iOS.
+				</p>
+			</div>
+			<div class="block72">
+				<img src="https://static.tickets.kz/svg/gd/icon-benefits-support.svg?6a6ae21927" alt="" class="benefits__img" height = 65 width = 55/>
+				<p class="benefits__title"><strong>Поддержка клиентов на каждом этапе покупки</strong></p>
+				<p class="benefits__descr">Специалисты нашей Службы заботы о клиентах готовы ответить на любые вопросы, связанные с поиском, бронированием и заказом ж/д билетов онлайн. Операторы Bustickets.kz говорят на русском, казахском и английском языках. Мы предоставим подробную информацию о том, как найти билеты по выгодной цене, как оплатить покупку через интернет, как забронировать дешевые билеты или совершить возврат билета КТЖ.</p>
+			</div>
+			<div class="block73">
+				<img src="https://static.tickets.kz/svg/gd/icon-benefits-ticket.svg?6a6ae21927" alt="" class="benefits__img" height = 65 width = 55/>
+				<p class="benefits__title"><strong>Возврат Автобус билета онлайн</strong></p>
+				<p class="benefits__descr">Если ваши планы изменились и поездку пришлось отменить – не нужно стоять в очереди, чтобы вернуть билет. Экономить время и деньги с Bustickets.kz – просто: возврат железнодорожных билетов онлайн занимает считанные минуты. Достаточно войти в личный кабинет и создать запрос на отмену. После того, как билет аннулирован, возврат средств производится на банковскую карту.</p>
+			</div>
+			<div class="block74">
+				<img src="https://static.tickets.kz/svg/gd/icon-benefits-gift.svg?6a6ae21927" alt="" class="benefits__img" height = 65 width = 55/>
+				<p class="benefits__title"><strong>Система бонусов для постоянных клиентов</strong></p>
+				<p class="benefits__descr">С бонусной программой Tickets.kz путешествия не только приятные, но и выгодные. Tickets.kz возвращает часть ваших денег за каждую транзакцию. Каждый раз, когда вы покупаете билет – вы экономите на следующей покупке. 1% от стоимости каждого билета возвращается на ваш бонусный счет.</p>
+			</div>
+		</div>
+
+		<div class="block8">
+			<section class="home_info_block faq-block">
+					 <h3 class=h333>Частые вопросы</h3>
+					 <ul class="list nav-faq">
+						 <li><a target="_blank" href="/content/how-to-buy-train-ticket.html"><span>Как забронировать ж/д билет?</span></a>
+						 </li>
+						 <li><a target="_blank" href="/content/how-to-pay-train-tickets.html"><span>Как оплатить ж/д билет?</span></a>
+						 </li>
+						 <li><a target="_blank" href="/content/how-to-get-train-ticket.html"><span>Как получить ж/д билет?</span></a>
+						 </li>
+						 <li><a target="_blank" href="/content/how-to-refund-train-ticket.html"><span>Как вернуть ж/д билет?</span></a>
+						 </li>
+					 </ul></section>
+		</div>
+		
+		<div class="block9">
+			<h3 class="seo-benefits__home-info_title">Поиск дешевых Автобус билетов на Bustickets.kz</h3>
+			<div class="block91">
+				<h4>Честные цены на Автобусных билетах в Казахстане билеты</h4>
+		  		Купить билеты на поезд без очереди и даже не выходя из дома? Легко! На Bustickets.kz можно купить билет онлайн без скрытых комиссий и сборов. Вы выбираете направление, класс вагона и места. Наша поисковая система предлагает варианты и наличие билетов на поезд, выгодные по цене и удобные по сообщению. Вам нужно только выбрать и забронировать билет на любое направление, где ходят Автобуса Казахстан. Оплатить можно банковской картой или другим удобным способом. Для удобства путешественников есть мобильное приложение Bustickets.kz на Android и iOS.<br>
+		  		<h4>Поддержка клиентов на каждом этапе покупки</h4>
+		  		Специалисты нашей Службы заботы о клиентах готовы ответить на любые вопросы, связанные с поиском, бронированием и заказом билетов на поезд онлайн. Операторы Bustickets.kz говорят на русском, казахском и английском языках. Мы предоставим подробную информацию о том, как найти билеты по выгодной цене, как оплатить покупку через интернет, как забронировать дешевые билеты или совершить возврат билета КТЖ.<br>
+		  		<h4>Возврат ж/д билета онлайн</h4>
+		  		Если ваши планы изменились и поездку пришлось отменить – не нужно стоять в очереди, чтобы вернуть билет. Экономить время и деньги с Bustickets.kz – просто: возврат железнодорожных билетов онлайн занимает считанные минуты. Достаточно войти в личный кабинет и создать запрос на отмену. После того, как билет аннулирован, возврат средств производится на банковскую карту.<br>
+		  		<h4>Система бонусов для постоянных клиентов</h4>
+		  		С бонусной программой Bustickets.kz путешествия не только приятные, но и выгодные. Tickets.kz возвращает часть ваших денег за каждую транзакцию. Каждый раз, когда вы покупаете билет – вы экономите на следующей покупке. 1% от стоимости каждого билета возвращается на ваш бонусный счет.    
+			</div>
+		</div>
+	</body>
+</html>

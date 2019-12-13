@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Buy Bus Tickets</title>
+    {% load static %}
+		<link href="{% static 'css/StyleCss2.css' %}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>{% block content %}
+
+	<header>
+        
+		<nav>
+			<input type="checkbox" id="checkbox-menu">
+			<label for="checkbox-menu">
+
+			    <ul class="menu touch">
+					<li><img class="bbt" src="{% static 'imgs/bbt.png' %}"></li>
+			    	<div><a class="logo" href="/">BuyBusTickets</a></div>
+
+			    	<li><a href="/">Главная</a></li>
+			    	<li><a class="contacts" href="#">Контакты</a></li>
+			    	<li><a href="#">Справка</a></li>
+
+{% if user.is_authenticated %}
+  {{ user.username }}
+  <p><a href="/buses/">Выйти</a></p>
+{% else %}
+  <a href="/accounts/login/">Войти</a>
+{% endif %}
+			    	<li><a href="/signup/">Регистрация</a></li>
+			    </ul>
+
+			</label>
+		</nav>
+	</header>
+
+	<div class="sinie_polosy">
+		<div class="verh_polosa">
+			
+				
+					<div><a id="e1" href="./vyborpoezda.html">Выбор поезда </a></div>
+					<div><a class="e22" href="./index3.html">Выбор местa</a></div>
+					<div><a id="e3" href="./passengerdata.html">Оплата заказа</a></div>
+				
+			
+		</div>
+	 
+   </div>
+
+   <div class="grayback">
+   	<div class="From-To">
+   		<div class="leftWay">
+   			<span id="strelka">&#10132;</span> <p id="AN"><strong>{{message1}} - {{message2}}</strong></p>
+   			<p id="datavyezda">{{message3}}</p>
+   			<p id="chislopoezdov"> Мы нашли {{quantity}} автобусов по вашему запросу</p>
+   		<div class="infoline">
+   			<p id="i112"> Автобус</p>
+   			<p id="i113"> Отправление</p>
+
+   			<p id="i115"> Прибытие</p>
+   		 </div>
+            {% for x in buses %}
+		<div class="results__item">
+	
+      <div class="levyi_col">
+        <strong class="results__item-info">
+          <img src="./Tick_files/provider_logo_kz.png" alt="">{{x.bus_service}}<br>{{x.bus_manufacturer}}<br><br></strong><div>{{message1}} - {{message2}}<br></div>
+
+<!--		 {% for d in dates %}-->
+<!--		  <p>{{d.date}}</p>-->
+<!--		  {% endfor %}-->
+
+                           </a>
+		  			{% for date in dates %}
+		  {% if date.bus.id is x.id %}
+
+
+<form action="/buses/{{x.id}}/seats/{{date.id}}" method="get">
+<div class="vybor">
+	<button type="submit" class="search__form-button button main-search__btn btn" data-uil="submit_search" z-index="5" onclick="window.location">Выбрать</button>
+</div>
+	</form>
+		  {% endif %}
+		  {% endfor %}
+                          </div>
+			<img id="bus-logo" src="{% static 'imgs/bus-logo1.jpg' %}">
+
+      <div class="pravyi_col">
+
+
+		  			{% for date in dates %}
+        <div class="row">
+
+<div class="poehal_kakogo">
+					<div>
+			{% if date.bus.id is x.id %}
+			{{date.date_going_out}}<br>
+			{% endif %}
+			</div>
+</div>
+			<div class="priehal_kakogo">
+<div>{% if date.bus.id is x.id %}
+			{{date.date_arriving}}<br>
+				{% endif %}
+			</div>
+			</div>
+		</div>
+		  			{% endfor %}
+
+
+<!--          <div class="vybor_classa">-->
+<!--            <div class="results__item-seats-holder results__item-seats-holder&#45;&#45;kz js_free-places">-->
+<!--                                                  <div class="results__item-seats js-checker visible" data-car-class="reserved">-->
+<!--      <div class="results__item-seats__type">-->
+<!--                  <span class="results__item-seats__cost">от            <span class="markup">6 304.0&nbsp;KZT</span>-->
+<!--          </span>-->
+<!--                Эконом        <strong>16</strong>-->
+<!--      </div>-->
+<!--              <div class="results_button1">-->
+<!--          <a href="#">Выбрать</a>-->
+<!--        </div>-->
+<!--          </div>-->
+<!--          <div class="results__item-seats js-checker visible active" data-car-class="second">-->
+<!--      <div class="results__item-seats__type">-->
+<!--                  <span class="results__item-seats__cost">от            <span class="markup">11 989.0&nbsp;KZT</span>-->
+<!--          </span>-->
+<!--                Средний        <strong>209</strong>-->
+<!--      </div>-->
+<!--              <div class="results__item-seats__button">-->
+<!--          <a href="#">Выбрать</a>-->
+<!--        </div>-->
+<!--          </div>-->
+<!--          <div class="results__item-seats js-checker visible" data-car-class="first">-->
+<!--      <div class="results__item-seats__type">-->
+<!--                  <span class="results__item-seats__cost">от            <span class="markup">14 937.0&nbsp;KZT</span>-->
+<!--          </span>-->
+<!--                Люкс        <strong>14</strong>-->
+<!--      </div>-->
+<!--              <div class="results__item-seats__button">-->
+<!--          <a href="#">Выбрать</a>-->
+<!--        </div>-->
+<!--          </div>-->
+<!--                            </div>-->
+<!--            </div>-->
+        </div>
+       </div>
+
+	   </div><br><br><br><br><br><br><br><br><br><br><br><br>
+			            {% endfor %}
+</div>
+</div>
+</div>
+</body>
+    {% endblock %}
+	   <footer>
+  	<div class="underfoot"></div>
+  	<div class="leftfoot">
+  	<img class="bbt2" src="{% static 'imgs/bbt12.png' %}">
+  	<div class="Get_Started">
+  		<h3 id="getS">Get started</h3>
+  		
+  		<p><a id="hom" href="#">Home</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Sign up</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Downloads</a></p>
+
+  	</div>
+  	<div class="About_Us">
+  		<h3 id="abou">About us</h3>
+  		<p><a id="hom" href="#">Company Information</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Contact us</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Reviews</a></p>
+  </div>
+  <div class="Support">
+  		<h3 id="abou">Support</h3>
+  		<p><a id="hom" href="#">FAQ</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Help desk</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Forums</a></p>
+  </div>
+
+  <div class="allrights">
+  	<p><span>&#169;</span> 2019 BBT company, All rights reserved</p>
+  </div>
+
+  <div class="socIcons">
+  	<div class="fa">
+  		
+  		<img id="log-face" src="{% static 'imgs/logo-facebook.png' %}">
+  		<img id="log-twit" src="{% static 'imgs/Logo-Twitter.png' %}">
+  		<img id="log-google" src="{% static 'imgs/logo_google.png' %}">
+
+  	</div>
+
+
+  </div>
+  </footer>
+  </html>
+
+
+
+

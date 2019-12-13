@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <a class="navbar-brand" href="">New items</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Footwear <span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/accessories" class="btn  btn-sm">Accessories</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Sport</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="/" class="btn  btn-sm">Home</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+           <a class="btn btn-outline-light my-5 my-sm-0" href="">Basket<span class="sr-only">(current)</span> </a>
+    </form>
+    <form class="form-inline my-2 my-lg-0">
+        <a class="btn btn-outline-light my-4 my-sm-0" href="/login">Log in <span class="sr-only">(current)</span></a>
+    </form>
+  </div>
+</nav>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            {% for image_item in product.productimage_set.all %}
+                <img src="{{ image_item.image.url }}" class="img-responsive">
+            {% endfor %}
+        </div>
+        <div class="col-lg-6">
+            <h1 class="text-center">
+                {{ product.name }}
+            </h1>
+            <div class="">
+                <h5>
+                    Price: {{ product.price }}$
+                </h5>
+            </div>
+            <div class="">
+                <h6>
+                    Size
+                </h6>
+                {{ product.size }}
+            </div>
+            <div class="">
+                <h6>
+                    Description
+                </h6>
+                {{ product.description }}
+            </div>
+            <div>
+                <form id="form_buying_product" class="form-inline">
+                    <div class="form-group">
+                        <input type="number" class="forms-control">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success btn-buy">
+                            Buy
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-lg-offset-4">
+              <hr>
+                  Если у вас есть вопросы то можете написать нам на почту @bogini.sis1810@gmail.com  или позвонить по номеру : 8 (747)747-74-47
+              <hr>
+                   &copy; Все права защищены 2019
+          </div>
+      </div>
+  </div>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</body>
+</html>

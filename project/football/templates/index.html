@@ -1,0 +1,398 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <title>KPL</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Crossfit template project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap-4.2.1/bootstrap.min.css' %}">
+    <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.3.4/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+
+</head>
+
+<body>
+<!-- Header -->
+<header class="header" style="height: 130px">
+    <div class="container" align="center" style="padding: 5px; padding-bottom: 0px">
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/thumb/8/82/FK_Shakhtyor_Karagandy.svg/712px-FK_Shakhtyor_Karagandy.svg.png"
+             height="50" width="50">&nbsp;
+        <img src="https://upload.wikimedia.org/wikipedia/ru/8/8c/FC_Ak_Bulak_Logo.png" height="50" width="50">&nbsp;
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/thumb/c/c4/FC_Aktobe_Logo.svg/894px-FC_Aktobe_Logo.svg.png"
+             height="50" width="50">&nbsp;
+        <img src= "https://upload.wikimedia.org/wikipedia/en/thumb/7/7d/FC_Kaisar_logo.svg/1200px-FC_Kaisar_logo.svg.png" height="50" width="50" >
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/thumb/1/1c/FC_Alma-Ata_Logo.svg/554px-FC_Alma-Ata_Logo.svg.png"
+             height="50" width="50">&nbsp;
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/0/03/FC_Atyrau.png" height="50" width="50">&nbsp;
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/7/75/%D0%A4%D0%9A_%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_%282009%29.jpg"
+             height="50" width="50">&nbsp;
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/thumb/1/1a/%D0%A4%D0%9A_%D0%9E%D0%BA%D0%B6%D0%B5%D1%82%D0%BF%D0%B5%D1%81.png/1163px-%D0%A4%D0%9A_%D0%9E%D0%BA%D0%B6%D0%B5%D1%82%D0%BF%D0%B5%D1%81.png"
+             height="50" width="50">&nbsp;
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/f/ff/%D0%A4%D0%9A_%D0%98%D1%80%D1%82%D1%8B%D1%88_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B4%D0%B0%D1%80_logo.png"
+             height="50" width="50">&nbsp;
+        <img src="https://g3ptzvzn79.a.trbcdn.net/wp-content/uploads/2019/06/irtysh-shahter-karaganda-e1561235707848.jpg" height ="50" width="50" >
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/0/0e/140px-FC_Tobol.png" height="50" width="50">&nbsp;
+        <img src=" https://upload.wikimedia.org/wikipedia/ru/b/b2/%D0%A4%D0%9A_%D0%96%D0%B5%D1%82%D1%8B%D1%81%D1%83.png"
+             height="50" width="50">&nbsp;
+    </div>
+    <div class="logo top_align" style="padding-top:20px">
+        <a href="{% url 'home' %}"></a>
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/08/Kazakhstan_Football_Federation_logo.svg"/>
+    </div>
+    <div class="header_content d-flex flex-row align-items-center justify-content-center" style="padding-top:0px">
+        <div style="padding-bottom:3px">
+            <nav class="main_nav">
+                <ul class="d-flex flex-row align-items-center justify-content-start">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'schedule' %}">Schedules</a></li>
+                    <li><a href="{% url 'results' %}">Results</a></li>
+                    <li><a href="{% url 'players' %}">Players</a></li>
+                    <li><a href="{% url 'gallery' %}">Photo gallery</a></li>
+                    <li><a href="{% url 'videos' %}">Video gallery</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<!-- Home -->
+<div class="home">
+    {% block content %}
+
+    <!-- Home Slider -->
+    <div class="home_slider_container">
+        <div class="owl-carousel owl-theme home_slider">
+
+            <!-- Slide -->
+            <div class="slide">
+                <div class="background_image"
+                     style="background-image:url('https://sun9-58.userapi.com/c7005/v7005965/79b17/p3jvQuewDas.jpg')"></div>
+                <div class="slide_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="slide_content">
+                                    <div class="slide_title">
+                                        <div>The</div>
+                                        <div>Kazakhstan</div>
+                                        <div>Professional</div>
+                                        <div>Football <span style="color:white">League</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="slide">
+                <div class="background_image"
+                     style="background-image:url('https://sun9-34.userapi.com/c857432/v857432701/d991b/9FUokAtm4a8.jpg')"></div>
+                <div class="slide_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="slide_content">
+                                    <div class="slide_title">
+                                        <div>The</div>
+                                        <div>Kazakhstan</div>
+                                        <div>Professional</div>
+                                        <div>Football <span style="color:white">League</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide -->
+            <div class="slide">
+                <div class="background_image"
+                     style="background-image:url('https://sun2.dataix-kz-akkol.userapi.com/c855224/v855224467/16f5b3/okZsKET88F0.jpg')"></div>
+                <div class="slide_container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <div class="slide_content">
+                                    <div class="slide_title">
+                                        <div>The</div>
+                                        <div>Kazakhstan</div>
+                                        <div>Professional</div>
+                                        <div>Football
+                                            <span style="color:white">League</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div style="display:flex; border-top: 3px solid black;  border-bottom:3px solid black">
+        <div class="table-responsive" style="width:415px; margin:5px; ">
+            <table class="table table-bordered table-dark" style="width:400px; margin-left:5px; margin-top:20px;">
+
+                <thead>
+
+                <tr>
+                    <th scope="col" width="50" style="height:10px; width:50px;">#</th>
+                    <th scope="col">Команды</th>
+                    <th scope="col">И</th>
+                    <th scope="col">В</th>
+                    <th scope="col">Н</th>
+                    <th scope="col">П</th>
+                    <th scope="col">О</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row"><img
+                            src=" https://upload.wikimedia.org/wikipedia/ru/7/75/%D0%A4%D0%9A_%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0_%282009%29.jpg"
+                            height="25" width="25"></th>
+                    <td>Astana</td>
+                    <td>33</td>
+                    <td>22</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>69</td>
+
+
+                </tr>
+                <tr>
+                    <th scope="row"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/FCKairat_logo.png/790px-FCKairat_logo.png"
+                            height="25" width="25"/></th>
+                    <td>Kairat</td>
+                    <td>33</td>
+                    <td>22</td>
+                    <td>2</td>
+                    <td>9</td>
+                    <td>68</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="http://www.fcordabasy.kz/images/logo.png" height="25" width="25"/></th>
+                    <td>Ordabasy</td>
+                    <td>33</td>
+                    <td>19</td>
+                    <td>8</td>
+                    <td>6</td>
+                    <td>65</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="https://upload.wikimedia.org/wikipedia/ru/0/0e/140px-FC_Tobol.png"
+                                         height="25" width="25"/></th>
+                    <td>Tobol</td>
+                    <td>33</td>
+                    <td>19</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>63</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img
+                            src="https://upload.wikimedia.org/wikipedia/ru/b/b2/%D0%A4%D0%9A_%D0%96%D0%B5%D1%82%D1%8B%D1%81%D1%83.png"
+                            height="25" width="25"/></th>
+                    <td>Zhetisu</td>
+                    <td>33</td>
+                    <td>16</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>56</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="https://upload.wikimedia.org/wikipedia/ru/e/e1/Kaysarfc.png" height="25"
+                                         width="25"/></th>
+                    <td>Kaysar</td>
+                    <td>6</td>
+                    <td>15</td>
+                    <td>6</td>
+                    <td>15</td>
+                    <td>42</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img
+                            src="https://upload.wikimedia.org/wikipedia/ru/thumb/1/1a/%D0%A4%D0%9A_%D0%9E%D0%BA%D0%B6%D0%B5%D1%82%D0%BF%D0%B5%D1%81.png/1163px-%D0%A4%D0%9A_%D0%9E%D0%BA%D0%B6%D0%B5%D1%82%D0%BF%D0%B5%D1%81.png"
+                            height="25" width="25"/></th>
+                    <td>Okzhetpes</td>
+                    <td>33</td>
+                    <td>11</td>
+                    <td>7</td>
+                    <td>15</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img
+                            src="https://upload.wikimedia.org/wikipedia/ru/f/ff/%D0%A4%D0%9A_%D0%98%D1%80%D1%82%D1%8B%D1%88_%D0%9F%D0%B0%D0%B2%D0%BB%D0%BE%D0%B4%D0%B0%D1%80_logo.png"
+                            height="25" width="25"/></th>
+                    <td>Irtysh</td>
+                    <td>33</td>
+                    <td>11</td>
+                    <td>4</td>
+                    <td>18</td>
+                    <td>37</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="https://upload.wikimedia.org/wikipedia/ru/4/44/Shahterkaraganda.png"
+                                         height="25" width="25"/></th>
+                    <td>Shahter</td>
+                    <td>33</td>
+                    <td>9</td>
+                    <td>8</td>
+                    <td>16</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="https://www.sports.kz/upload/2014-03/5320105fb6e5d.jpg" height="25"
+                                         width="25"/></th>
+                    <td>Taraz</td>
+                    <td>33</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>18</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img src="https://upload.wikimedia.org/wikipedia/ru/0/03/FC_Atyrau.png" height="25"
+                                         width="25"/></th>
+                    <td>Atyrau</td>
+                    <td>33</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td>19</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <th scope="row"><img
+                            src="https://upload.wikimedia.org/wikipedia/ru/thumb/c/c4/FC_Aktobe_Logo.svg/894px-FC_Aktobe_Logo.svg.png"
+                            height="25" width="25"/></th>
+                    <td>Aktobe</td>
+                    <td>33</td>
+                    <td>7</td>
+                    <td>6</td>
+                    <td>20</td>
+                    <td>15</td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="container"
+             style="padding-top:20px; margin-top:20px; border-top:3px black solid;">
+
+            <header>
+                <h2 class="subHeader">Latest News</h2>
+            </header>
+            <div class="col-md-15">
+                <div class="row">
+                    {% for new in news %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <img class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 src="{{ new.image.url }}" preserveAspectRatio="xMidYMid slice" focusable="false"
+                                 role="img" aria-label="Placeholder: Thumbnail">
+                            <rect width="100%" height="100%" fill="#55595c"></rect>
+                            </img>
+                            <div class="card-body">
+                                <p class="card-text">{{ new.summary }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="{% url 'detail' new.id %}" class="btn btn-sm btn-outline-secondary">View</a>
+                                    </div>
+                                    <small class="text-muted">{{ new.date }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container"  style="padding-top:20px; margin-top:20px; border-top:3px black solid; border-bottom:3px black solid">
+        <header>
+            <h2 class="subHeader">Latest Videos</h2>
+        </header>
+
+       <div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+                {% for video in videos %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <iframe class="bd-placeholder-img card-img-top" width="100%" height="225"
+                         src="https://www.youtube.com/embed/{{ video.key }}" preserveAspectRatio="xMidYMid slice" focusable="false"
+                         role="img" aria-label="Placeholder: Thumbnail">
+                        <rect width="100%" height="100%" fill="#55595c"></rect>
+                    </iframe>
+                    <div class="card-body">
+                        <p class="card-text">{{ video.summary }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+    </div>
+    {% endblock %}
+
+
+    <footer id="footer" class="footer-1" style="background-color:black; margin-top:20px;  margin-bottom:0;">
+    <div class="footer-copyright" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>Nomad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'styles/bootstrap-4.2.1/popper.js' %}"></script>
+<script src="{% static 'styles/bootstrap-4.2.1/bootstrap.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+<script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+<script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+<script src="{% static 'plugins/OwlCarousel2-2.3.4/owl.carousel.js' %}"></script>
+<script src="{% static 'plugins/easing/easing.js' %}"></script>
+<script src="{% static 'plugins/progressbar/progressbar.min.js' %}"></script>
+<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>

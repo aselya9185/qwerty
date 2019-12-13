@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="53a695e0-2d80-43db-a4e6-fe43a19effa3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/static/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/static/css/bootstrap-social.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/static/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/static/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/static/css/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/static/js/bootstrap.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/static/js/jquery-1.10.2.min.js.download" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/templates/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Weather/Weather/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather/Weather/Weather_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weather/Weather/Weather_app/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather/Weather/Weather_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weather/Weather/Weather_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather/Weather/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Weather/Weather/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather/Weather/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Weather/Weather/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather/Weather/weather/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weather/Weather/weather/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Weather/Weather/weather/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Weather/Weather/weather/views.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Weather/Weather" />
+  </component>
+  <component name="ProjectId" id="1UkbFEpWHw2Ev5QYtEJhM33vloP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Weather/Weather/static" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\asus\Desktop\w\Weather\Weather\static" />
+      <recent name="C:\Users\asus\Desktop\w\Weather\Weather\static\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53a695e0-2d80-43db-a4e6-fe43a19effa3" name="Default Changelist" comment="" />
+      <created>1575903434179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575903434179</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

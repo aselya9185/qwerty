@@ -1,0 +1,427 @@
+*{
+	padding:0;
+	margin: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	
+}
+body, html{
+    overflow-x: hidden;
+   
+}
+
+nav{
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+}
+#checkbox-menu{
+	display: none;
+}
+.menu {
+	padding: 0;
+	margin: 0;
+	height: 65px;
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+.menu li a{
+	color: #000;
+	text-decoration: none;
+	align-self: center;
+	font-size: 15px;
+	padding: 10px 15px;
+	transition: background .2s linear;
+}
+.menu li a:hover{
+	background: #ffcc01;
+	border-radius: 3px;
+}
+.logo{
+
+	font-size: 49px;
+	font-family: 'Bebas Neue', cursive;
+	margin-right: 55px;
+	color: #f56600;
+	background-color: white;
+	text-decoration: none;
+
+}
+.bbt{
+	width: 140px;
+	height: 50px;
+	margin-left: 24px;
+}
+.menu li a.contacts{
+	
+}
+.logo:hover{
+   background: white;
+}
+.sinie_polosy{
+	width: 100%
+	height: 200px;
+	background-color: #aebad2;
+	
+}
+.verh_polosa{
+	width: 100%;
+	height: 30px;
+	background-color: #22225e;
+	display: flex;
+	padding-top: 19px;
+	padding-bottom: 10px;
+	
+	flex-direction: row;
+	
+	list-style-type: none;
+	
+}
+#e1{
+	color: #22225e;
+	margin-left: 440px;
+	margin-right: 70px;
+	text-decoration: none;
+	padding: 9px 13px;
+	border-radius: 3px;
+	background-color: #ccd5e3;
+	transition: background .2s linear;
+}
+#e1:hover{
+	background: #ffb433;
+}
+
+.e22{
+	color: #22225e;
+	margin-right: 60px;
+	padding: 9px 13px;
+	background-color: #ccd5e3;
+	border-radius: 3px;
+	text-decoration: none;
+	
+}
+
+
+#e3{
+	color: #22225e;
+	margin-right: 100px;
+	padding: 9px 13px;
+	background-color: #ffb433;
+	border-radius: 3px;
+	text-decoration: none;
+	transition: background .2s linear;
+}
+#e3:hover{
+	background: #ffb433;
+}
+
+
+.grayback{
+	width: 100%;
+	height: 800px;
+	background-color: #e9eaed;
+	position: relative;
+}
+
+
+.box2{
+    box-shadow: 1px 5px 5px rgba(0,0,0,0.30);
+    width: 1020px;
+    height: 700px;
+    margin: 0 auto;
+    border: 1px solid #e9eaed;
+    background-color: #fff;
+
+}
+.topbox{
+	width: 1002px;
+	height: 50px;
+	
+    padding-left: 20px;
+	
+	padding-top: 20px;
+}
+.midbox{
+	width: 1021px;
+	height: 70px;
+	background-color: #e9eaed;
+	
+}
+#passengernumber{
+	padding-top: 28px;
+	padding-left: 20px;
+	width: 350px;
+	position: absolute;
+}
+
+input,
+select,
+textarea {
+  font: 300 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.register-group label {
+  color: #648880;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.register-group input,
+.register-group textarea {
+  width: 100%;
+}
+.register-group select {
+  height: 34px;
+  width: 300px;
+  margin-top: 20px;
+
+}
+.register-group textarea {
+  height: 78px;
+}
+.register-group input,
+.register-group select,
+.register-group textarea {
+  border: 1px solid #c6c9cc;
+  border-radius: 10px;
+  color: #888;
+  display: block;
+  margin: 5px 0 27px 0;	
+  padding: 5px 8px;
+}
+
+.regbox{
+  width: 1021px;
+  position: relative;
+}
+.leftbox{
+	width: 300px;
+	margin-top: 20px;
+	margin-left: 20px;
+	position: absolute;
+}
+
+.rightbox{
+  position: absolute;
+  margin-left: 400px;
+  margin-top: 20px;
+}
+
+.delete{
+	position: absolute;
+	margin-left: 840px;
+	margin-top: 24px;
+	color: gold;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    align-items: center;
+	text-decoration: none;
+	transition: background .2s linear;
+}
+#udali{
+	color: red;
+	text-decoration: none;
+}
+.delete:hover{
+	color: red;
+	border-radius: 4px;
+	background: white;
+
+
+}
+.righrighbox{
+	margin-left: 700px;
+	position: absolute;
+	margin-top: 20px;
+}
+.btn {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: .5px;
+  margin: 0;
+  text-transform: uppercase;
+}
+.btn-alt {
+  border: 1px solid #fff;
+  padding: 10px 30px;
+}
+.btn-alt:hover {
+  background: #fff;
+  color: #648880;
+}
+.btn-default {
+  border: 0;
+  background: #648880;
+  padding: 11px 30px;
+  font-size: 14px;
+}
+.btn-default:hover {
+  background: #77a198;
+}
+.btn.btn-default{
+	margin-top: 23.5px;
+	position: absolute;
+	color: white;
+}
+
+.botbox{
+	position: relative;
+	margin-top: 240px;
+	width: 1021px;
+	height: 70px;
+	background-color: #e9eaed;
+}
+#passengernumber2{
+	padding-top: 28px;
+	padding-left: 20px;
+	width: 350px;
+	position: absolute;
+}
+.delete2{
+	position: absolute;
+	margin-left: 840px;
+	margin-top: 24px;
+	color: gold;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    
+	text-decoration: none;
+	transition: background .2s linear;
+}
+#udali2{
+	color: red;
+	text-decoration: none;
+}
+.delete2:hover{
+	color: red;
+	border-radius: 4px;
+	background: white;
+}
+
+footer{
+	width: 100%;
+	height: 267px;
+	background-color: #22225e;
+}
+.underfoot{
+	width: 100%;
+	height: 20px;
+	background-color: #aebad2;
+
+}
+.bbt2{
+	width: 200px;
+	height: 100px;
+	margin-top: 80px;
+	margin-left: 200px;
+	position: absolute;
+}
+
+.leftfoot{
+	position: relative;
+
+}
+.Get_Started{
+  position: absolute;
+  margin-left: 550px;
+  margin-top: 80px;
+}
+#getS{
+	color: #f56600;
+	margin-bottom: 10px;
+}
+#hom{
+	margin-bottom: 5px;
+	color: white;
+	text-decoration: none;
+	
+	transition: .2s linear;
+}
+#hom:hover{
+	color: #f56600 ;
+	background: white;
+	border-radius: 5px;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.About_Us{
+	position: absolute;
+	margin-left: 750px;
+	margin-top: 80px;
+}
+#abou{
+	color: #f56600;
+	margin-bottom: 10px;
+}
+#betw{
+	color: #22225e;
+}
+.Support{
+	position: absolute;
+	margin-left: 1000px;
+	margin-top: 80px;
+}
+.socIcons{
+ 
+ width: 
+
+}
+#log-face{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	margin-left: 1300px;
+	margin-top: 70px;
+	transition: .2s linear;
+
+}
+#log-twit{
+	width: 114px;
+	height: 64px;
+	position: absolute;
+	margin-left: 1380px;
+	margin-top: 78px;
+	transition: .2s linear;
+}
+#log-google{
+	width: 75px;
+	height: 75px;
+	margin-left: 1500px;
+	margin-top: 72px;
+	position: absolute;
+	transition: .2s linear;
+}
+#log-google:hover{
+	width: 80px;
+	height: 80px;
+	margin-top: 60px;
+	margin-left: 1495px;
+}
+#log-twit:hover{
+	width: 125px;
+	height: 75px;
+	margin-top: 70px;
+	margin-left: 1375px;
+}
+#log-face:hover{
+	width: 90px;
+	height: 90px;
+	margin-top: 60px;
+	margin-left: 1295px;
+}
+.allrights{
+	position: absolute;
+	margin-left: 195px;
+	margin-top: 200px;
+	color: white;
+}

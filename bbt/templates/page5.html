@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="{% static 'css/style5.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<header>	
+		<nav>
+			<input type="checkbox" id="checkbox-menu">
+			<label for="checkbox-menu">
+
+			    <ul class="menu touch">
+					<li><img class="bbt" src="{% static 'imgs/bbt.png' %}"></li>
+			    	<div><a class="logo" href="#">BuyBusTickets</a></div>
+
+			    	<li><a href="#">Главная</a></li>
+			    	<li><a class="contacts" href="#">Контакты</a></li>
+			    	<li><a href="#">Справка</a></li>
+
+{% if user.is_authenticated %}
+  {{ user.username }}
+  <p><a href="/buses/<int:bus_id>/seats/<int:date_id>/passengerinfo/send_email/">Выйти</a></p>
+{% else %}
+  <a href="/accounts/login/">Войти</a>
+{% endif %}
+
+			    	<li><a href="/signup/">Регистрация</a></li>
+			    </ul>
+
+			</label>
+		</nav>
+	</header>
+	<div class="block1">
+		<h1> Ваш покупка успешно завершено. </h1>
+	</div>
+	<h3 class="block1">
+		<h3> Время выезда: {{date.date_going_out}} </h3>
+		<h3> Время приезда: {{date.date_arriving}} </h3>
+		<h3> Имя пассажира: {{a.name}}   </h3>
+		<h3>Фамилия пассажира: {{a.surname}}</h3>
+		<h3> Cервис: {{bus.bus_service}} </h3>
+		<h3> Номер автобуса: {{bus.bus_number}} </h3>
+	</div>
+
+	<div class="block2">
+		<a href="/">Назад</a>
+
+	</div>
+	</body>

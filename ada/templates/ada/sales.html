@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <a class="navbar-brand" href="">New items</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Footwear <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Accessories</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Sport</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">House</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+           <a class="btn btn-outline-light my-5 my-sm-0" href="">Basket<span class="sr-only">(current)</span> </a>
+    </form>
+    <form class="form-inline my-2 my-lg-0">
+        <a class="btn btn-outline-light my-4 my-sm-0" href="/login">Log in <span class="sr-only">(current)</span></a>
+    </form>
+  </div>
+</nav>
+<body>
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-md-12 d-flex justify-content-center mb-5">
+
+    <button type="button" class="btn btn-outline-black waves-effect filter" data-rel="all">All</button>
+
+  </div>
+
+
+</div>
+<div class="row">
+  <div class="col-md-12">
+
+    <div id="mdb-lightbox-ui"></div>
+
+    <div class="mdb-lightbox no-margin">
+        <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+        <a class="black-text" href="{% static 'pictures/1.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/1.jpg' %}"
+            class="img-fluid">
+          <h3 class="text-center my-3">Sale 15%</h3>
+        </a>
+      </figure>
+        <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+        <a class="black-text" href="{% static 'pictures/2.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/2.jpg' %}"
+            class="img-fluid">
+          <h3 class="text-center my-3">Sale 25%</h3>
+        </a>
+      </figure>
+        <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/3.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/3.jpg' %}"
+            class="img-fluid">
+          <h3 class="text-center my-3">Sale 35%</h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/4.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/4.jpg' %}"
+            class="img-fluid">
+          <h3 class="text-center my-3">Sale 45%</h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/11.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/11.jpg' %}"
+            class="img-fluid" />
+          <h3 class="text-center my-3">Sale 20%</h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/22.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/22.jpg' %}"
+            class="img-fluid" />
+          <h3 class="text-center my-3">Sale 10%</h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/33.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/33.jpg' %}"
+            class="img-fluid" />
+          <h3 class="text-center my-3">Sale 30%</h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/44.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/44.jpg' %}"
+            class="img-fluid" />
+          <h3 class="text-center my-3">Sale 40%</h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/111.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/111.jpg' %}"
+            class="img-fluid" />
+          <h3 class="text-center my-3">Sale 25%</h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/222.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/222.jpg' %}"
+            class="img-fluid" />
+          <h3 class="text-center my-3">Sale 15%</h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/333.jpg' %}"
+          data-size="1600x1067">
+          <img alt="picture" src="{% static 'pictures/333.jpg' %}"
+            class="img-fluid" />
+          <h3 class="text-center my-3">Sale 20% </h3>
+        </a>
+      </figure>
+
+      <figure class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+        <a class="black-text" href="{% static 'pictures/444.jpg'%}"
+          data-size="120x100">
+          <img alt="picture" src="{% static 'pictures/444.jpg' %}"
+            class="img-fluid" />
+          <h3 class="text-center my-3">Sale 15% </h3>
+        </a>
+      </figure>
+
+    </div>
+
+  </div>
+</div>
+
+
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-4 col-lg-offset-4">
+              <hr>
+                  Если у вас есть вопросы то можете написать нам на почту @bogini.sis1810@gmail.com  или позвонить по номеру : 8 (747)747-74-47
+              <hr>
+                   &copy; Все права защищены 2019
+          </div>
+      </div>
+  </div>
+
+
+</body>
+</html>
+

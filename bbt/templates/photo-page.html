@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="{% static 'css/photo-page.css' %}" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	
+
+	<header>
+        
+		<nav>
+			<input type="checkbox" id="checkbox-menu">
+			<label for="checkbox-menu">
+
+			    <ul class="menu touch">
+					<li><img class="bbt" src="{% static 'imgs/bbt.png' %}"></li>
+			    	<div><a class="logo" href="#">BuyBusTickets</a></div>
+
+			    	<li><a href="#">Главная</a></li>
+			    	<li><a class="contacts" href="#">Контакты</a></li>
+			    	<li><a href="#">Справка</a></li>
+
+{% if user.is_authenticated %}
+  {{ user.username }}
+  <p><a href="{% url 'logout' %}">Выйти</a></p>
+{% else %}
+  <a href="{% url 'login' %}">Войти</a>
+{% endif %}
+
+			    	<li><a href="/signup/">Регистрация</a></li>
+			    </ul>
+
+			</label>
+		</nav>
+	</header>
+	
+	<div class="sinie_polosy">
+		<div class="verh_polosa">
+			
+				
+					<div><a id="e1" href="#">Выбор автобуса </a></div>
+					<div><a class="e22" href="./page3.html">Выбор места</a></div>
+					<div><a id="e3" href="#">Оплата заказа</a></div>
+
+
+		</div>
+
+   </div>
+
+   <div class="grayback">
+   </div>
+</body>
+
+<footer>
+  	<div class="underfoot"></div>
+  	<div class="leftfoot">
+  	<img class="bbt2" src="{% static 'imgs/bbt12.png' %}">
+  	<div class="Get_Started">
+  		<h3 id="getS">Get started</h3>
+
+  		<p><a id="hom" href="#">Home</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Sign up</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Downloads</a></p>
+
+  	</div>
+  	<div class="About_Us">
+  		<h3 id="abou">About us</h3>
+  		<p><a id="hom" href="#">Company Information</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Contact us</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Reviews</a></p>
+  </div>
+  <div class="Support">
+  		<h3 id="abou">Support</h3>
+  		<p><a id="hom" href="#">FAQ</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Help desk</a></p>
+  		<p><a id="betw">-</a></p>
+  		<p><a id="hom" href="#">Forums</a></p>
+  </div>
+
+  <div class="allrights">
+  	<p><span>&#169;</span> 2019 BBT company, All rights reserved</p>
+  </div>
+
+  <div class="socIcons">
+  	<div class="fa">
+
+  		<img id="log-face" src="{% static 'imgs/logo-facebook.png' %}">
+  		<img id="log-twit" src="{% static 'imgs/Logo-Twitter.png' %}">
+  		<img id="log-google" src="{% static 'imgs/logo_google.png' %}">
+
+  	</div>
+  </div>
+	  </div>
+</footer>

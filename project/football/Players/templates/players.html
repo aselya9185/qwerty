@@ -1,0 +1,63 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  text-align: center;
+}
+
+p {
+  color: black;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+</style>
+<br/><br/><br/><br/><br/><br/>
+<div class="album py-5 bg-light" style="height:100%">
+    <div class="container">
+        <div class="row" >
+            {% for player in players %}
+            <div class="col-md-2">
+                <div class="card mb-4 shadow-sm">
+            <div class="card" style="height:450px">
+                <img src="{{ player.smallImg.url }}" alt="" style="width:100%; height: 50%;" >
+                <h4>{{ player.name }}</h4>
+                <h4>{{ player.lastName }}</h4>
+                <p class="title">{{ player.position }}</p>
+                <p>{{ player.fc }}</p>
+                <a href="{% url 'details' player.id %}"><p>
+                    <button  style="margin-bottom:5px">View</button>
+                </p></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

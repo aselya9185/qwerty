@@ -1,0 +1,271 @@
+*{
+	padding:0;
+	margin: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	
+}
+body, html{
+    overflow-x: hidden;
+   
+}
+
+nav{
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+}
+#checkbox-menu{
+	display: none;
+}
+.menu {
+	padding: 0;
+	margin: 0;
+	height: 65px;
+	display: flex;
+	flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+.menu li a{
+	color: #000;
+	text-decoration: none;
+	align-self: center;
+	font-size: 15px;
+	padding: 10px 15px;
+	transition: background .2s linear;
+}
+.menu li a:hover{
+	background: #ffcc01;
+	border-radius: 3px;
+}
+.logo{
+
+	font-size: 49px;
+	font-family: 'Bebas Neue', cursive;
+	margin-right: 55px;
+	color: #f56600;
+	background-color: white;
+	text-decoration: none;
+
+}
+.bbt{
+	width: 140px;
+	height: 50px;
+	margin-left: 24px;
+}
+.menu li a.contacts{
+	
+}
+.logo:hover{
+   background: white;
+}
+.sinie_polosy{
+	width: 100%
+	height: 200px;
+	background-color: #aebad2;
+	
+}
+.verh_polosa{
+	width: 100%;
+	height: 30px;
+	background-color: #22225e;
+	display: flex;
+	padding-top: 19px;
+	padding-bottom: 10px;
+	
+	flex-direction: row;
+	
+	list-style-type: none;
+	
+}
+
+.grayback{
+	width: 100%;
+	max-height: 2500px;
+	background-color: #e9eaed;
+	position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+	width: 100%;
+	height: 267px;
+	background-color: #22225e;
+}
+.underfoot{
+	width: 100%;
+	height: 20px;
+	background-color: #aebad2;
+
+}
+.bbt2{
+	width: 200px;
+	height: 100px;
+	margin-top: 80px;
+	margin-left: 200px;
+	position: absolute;
+}
+
+.leftfoot{
+	position: relative;
+
+}
+.Get_Started{
+  position: absolute;
+  margin-left: 550px;
+  margin-top: 80px;
+}
+#getS{
+	color: #f56600;
+	margin-bottom: 10px;
+}
+#hom{
+	margin-bottom: 5px;
+	color: white;
+	text-decoration: none;
+	
+	transition: .2s linear;
+}
+#hom:hover{
+	color: #f56600 ;
+	background: white;
+	border-radius: 5px;
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.About_Us{
+	position: absolute;
+	margin-left: 750px;
+	margin-top: 80px;
+}
+#abou{
+	color: #f56600;
+	margin-bottom: 10px;
+}
+#betw{
+	color: #22225e;
+}
+.Support{
+	position: absolute;
+	margin-left: 1000px;
+	margin-top: 80px;
+}
+.socIcons{
+ 
+ width: 
+
+}
+#log-face{
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	margin-left: 1300px;
+	margin-top: 70px;
+	transition: .2s linear;
+
+}
+#log-twit{
+	width: 114px;
+	height: 64px;
+	position: absolute;
+	margin-left: 1380px;
+	margin-top: 78px;
+	transition: .2s linear;
+}
+#log-google{
+	width: 75px;
+	height: 75px;
+	margin-left: 1500px;
+	margin-top: 72px;
+	position: absolute;
+	transition: .2s linear;
+}
+#log-google:hover{
+	width: 80px;
+	height: 80px;
+	margin-top: 60px;
+	margin-left: 1495px;
+}
+#log-twit:hover{
+	width: 125px;
+	height: 75px;
+	margin-top: 70px;
+	margin-left: 1375px;
+}
+#log-face:hover{
+	width: 90px;
+	height: 90px;
+	margin-top: 60px;
+	margin-left: 1295px;
+}
+.allrights{
+	position: absolute;
+	margin-left: 195px;
+	margin-top: 200px;
+	color: white;
+}
+
+
+#avtobus1{
+    width: 500px;
+    height: 300px;
+    margin-top: 200px;
+    position: absolute;
+}

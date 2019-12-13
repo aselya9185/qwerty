@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Buy Bus Tickets</title>
+	{% load static %}
+	<link href="{% static 'css/style3.css' %}" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+{% block content %}
+<body>
+
+
+	<header>
+
+		<nav>
+			<input type="checkbox" id="checkbox-menu">
+			<label for="checkbox-menu">
+
+			    <ul class="menu touch">
+					<li><img class="bbt" src="{% static 'imgs/bbt.png' %}"></li>
+			    	<div><a class="logo" href="#">BuyBusTickets</a></div>
+
+			    	<li><a href="/">Главная</a></li>
+			    	<li><a class="contacts" href="#">Контакты</a></li>
+			    	<li><a href="#">Справка</a></li>
+
+{% if user.is_authenticated %}
+  {{ user.username }}
+  <p><a href="{% url 'logout' %}">Выйти</a></p>
+{% else %}
+  <a href="{% url 'login' %}">Войти</a>
+{% endif %}
+
+			    	<li><a href="/signup/">Регистрация</a></li>
+			    </ul>
+
+			</label>
+		</nav>
+	</header>
+
+	<div class="sinie_polosy">
+		<div class="verh_polosa">
+
+
+					<div><a id="e1" href="#">Выбор поезда </a></div>
+					<div><a class="e22" href="#">Выбор местa</a></div>
+					<div><a id="e3" href="./page4.html">Оплата заказа</a></div>
+
+
+		</div>
+
+   </div>
+    <div class="grayback">
+		<div class="results__item">
+
+      <div class="levyi_col">
+        <strong class="results__item-info">
+          <img src="./Tick_files/provider_logo_kz.png" alt="">{{bus.bus_service}}</strong>
+
+		<div>{{bus.from_city}}  - {{bus.to_city}}</div>
+                           </a>
+                          </div>
+        <img id="bus-logo" src="{% static 'imgs/bus-logo1.jpg' %}">
+
+      <div class="pravyi_col">
+        <div class="row">
+
+
+	 <div class="poehal_kakogo">
+	  <div class="results__item-time">
+		  <div>{{date.date_going_out}}</div>
+	  </div>
+	  </div>
+	 <div class="priehal_kakogo">
+	  <div class="results__item-time">
+	  <div>{{date.date_arriving}}</div>
+	  </div></div>
+
+          <div class="vybor_classa">
+            <div class="results__item-seats-holder results__item-seats-holder--kz js_free-places">
+          <div class="results__item-seats js-checker visible" data-car-class="first">
+
+          </div>
+                            </div>
+            </div>
+        </div>
+       </div>
+
+	   </div>
+		 <div class="box2">
+		 	<div class="topbox"><h1>Выберите местa</h1></div>
+		 	<div class="midbox">
+		 		<div id="svobodno"><strong>{{n}}</strong> свободных мест</div>
+		 		<div id="oboznachenie"> Цены на все места: 3500тг</div>
+		 		 </div>
+
+		 	<div class="botbox">
+			      <img id="busS" src="{% static 'imgs/6-shema.jpg' %}">
+		 		</div>
+
+           <div class="vybrano-mest">
+<form action="/buses/{{bus.id}}/seats/{{date.id}}/passengerinfo/" method="post">
+	{% csrf_token %}
+	<div class="SeatField">
+				 <input id="name" type="text" name="seat_number_field"  value="" placeholder="Номер сидений"  z-index="0" />
+	  </div>
+			  <div class="continue-button">
+
+			<button id="continue" type="submit" class="search__form-button button main-search__btn btn" data-uil="submit_search" z-index="5" onclick="window.location">Продолжить</button>
+			  </div>
+		  </div>
+</form>
+
+<p>{% for i in ddd %}
+	{{i.number}}
+{% endfor %}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+
+ </body>
+{% endblock %}
+</html>

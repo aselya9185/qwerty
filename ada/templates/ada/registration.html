@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link href="https://fonts.google.com/specimen/Niconne" rel="stylesheet">
+    <style>
+        body {
+            background: url("{% static 'pictures/pic2.png' %}");
+            color: #6d5850;
+            padding: 50px 450px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+            <p class="text-left"><h1>Registration</h1></p>
+                <div class="container">
+                    <form role="form" method="POST" action="{% url 'registration:Login' %}">{% csrf_token %}
+                        <div class="form-group">
+                            {{ form.as_p }}
+                            <button type="submit" name=" signup" class="btn btn-outline-secondary">Sign up</button>
+
+                        </div>
+                    </form>
+{#                    <form role="form" method="POST">{% csrf_token %}#}
+{#                        <div class="form-group">#}
+{#                            <label for="surname">Surname</label>#}
+{#                            {{ form.surname}}#}
+{##}
+{#                        </div>#}
+{#                    </form>#}
+{##}
+{#                    <form role="form" method="POST">{% csrf_token %}#}
+{#                        <div class="form-group">#}
+{#                            <label for="email">E-mail</label>#}
+{#                            {{ form.email }}#}
+{##}
+{#                        </div>#}
+{#                    </form>#}
+{#                    <form role="form" method="POST" action = {% url 'registration:Login' %}>{% csrf_token %}#}
+{#                        <div class="form-group">#}
+{#                            <label for="password">Create a password</label>#}
+{#                            {{ form.password }}#}
+{##}
+{#                        </div>#}
+{#                    </form>#}
+                </div>
+
+    </div>
+</body>
+</html>

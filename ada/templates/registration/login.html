@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link href="https://fonts.google.com/specimen/Niconne" rel="stylesheet">
+    <style>
+        body {
+            background: url("{% static 'pictures/pic.png' %}");
+            color: #6d5850;
+            padding: 150px 450px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+         <p class="text-left"><h1>Entrance</h1></p>
+        <div class="container">
+{#            <form role="form">#}
+{#                <div class="form-group">#}
+{#                    <label for="email">E-mail</label>#}
+{#                    <input type="email" class="form-control" id="email" placeholder="name@example.com">#}
+{#                </div>#}
+{#            </form>#}
+{##}
+{#            <form role="form">#}
+{#                <div class="form-group">#}
+{#                    <label for="password">Password</label>#}
+{#                    <input type="password" class="form-control" id="password" placeholder="Enter your password">#}
+{#                </div>#}
+{#            </form>#}
+            <form action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" value="Log in" class="btn btn-outline-secondary">
+            </form>
+        </div>
+        <br>
+{#        <div class="container">#}
+{#            <button class="btn btn-outline-secondary">Log in</button>#}
+{#        </div>#}
+        <br>
+        <div class="container">
+            <a class="btn btn-outline-secondary" href="{% url 'registration:Login' %}">Create an account<span class="sr-only">(current)</span></a>
+        </div>
+    </div>
+
+
+</body>
+</html>

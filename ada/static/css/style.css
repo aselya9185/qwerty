@@ -1,0 +1,95 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	color:#6d5850;
+}
+p{
+	font-family: Microsoft Jhenghei ui light;
+}
+
+.pink{
+	background-color: pink;
+	padding-bottom: 120px;
+	padding-top: 40px;
+
+}
+
+.for{
+
+	display: flex;
+	justify-content: center;
+	margin-top: -10px;
+}
+.for p{
+	text-align: center;
+	margin-right: 95px;
+	font-size: 30px;
+	font-family: Microsoft Jhenghei ui light;
+}
+
+.title{
+	text-align: center;
+}
+h1{
+	padding-top: 30px;
+	font-family: Monotype Corsiva;
+	font-size: 120px;
+	margin-bottom: 30px;
+}
+.pink h3{
+	font-family: Microsoft Jhenghei ui light;
+
+	font-size: 35px;
+}
+.for img{
+	width: 350px;
+	height: 350px;
+  	border-radius: 200px;
+  	display: flex;
+
+  	margin-left: 40px;
+
+}
+
+
+.du{
+	margin-top: 40px;
+}
+.site-block-cover-content{
+    margin-top: 50%;
+}
+
+.product-item{
+	height: 0;
+	border: 1px solid lightgray;
+    position: relative;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.add-to-card-btn{
+    position: absolute;
+    left: 85px;
+}
+
+.btn-success{
+	background-color: #FF1493;
+	border-color: #FF1493;
+}
+
+.price{
+	text-align: center;
+}
+
+.discount-container{
+	position: absolute;
+	top: 10%;
+	background: #28a745;
+	width: 30%;
+	color: white;
+	font-weight: 700;
+	padding: 3px;
+}
+

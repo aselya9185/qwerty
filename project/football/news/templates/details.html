@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% block content %}
+<br/><br/><br/><br/><br/><br/>
+
+<div class="container" style="position:relative">
+<div class="inside-news">
+    <div class="row top">
+        <div class="date">{{ news.date }}</div>
+    </div>
+    <h1 class="title">{{ news.title }}</h1>
+    <div class="img" align="center">
+        <img class="main-image"
+             src="{{ news.image.url }}"
+             alt="">
+    </div>
+    <hr/>
+    <br/>
+    <div class="text news-text">
+        <p align="justify" style="color: black;">{{ news.body }}</p>
+    </div>
+    <hr/>
+</div>
+</div>
+
+{% endblock %}

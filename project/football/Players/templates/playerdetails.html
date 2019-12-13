@@ -1,0 +1,79 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div style="width:100%; align:center"   >
+        <div id="t3-content" class="t3-content col-xs-12">
+        <div class="container" style="background:rgba(18,52,86,0.25); padding: 15px 15px; display:flex; ">
+            <div style="background:rgba(255,255,255,0.50); padding: 15px; margin: 10px;" class="col-lg-4">
+                <img src="{{ players.fullimg.url }}" width="100%"></div>
+            <div class="col-lg-4" style="padding: 15px; margin:10px; background:rgba(255,255,255,0.50);">
+                <h4>Информация:</h4>
+                <table class="jsnoborders" width="100%" style="color:black">
+                    <tbody>
+                    <tr>
+                        <td width="40%" class="player_info">
+                            Имя :
+                        </td>
+                        <td width="60%">
+                           {{ players.name }} {{ players.lastName }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="player_info">
+                            Амплуа :
+                        </td>
+                        <td>
+                            {{ players.position }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="player_info">
+                            Клуб :
+                        </td>
+                        <td>
+                            {{ players.fc }}
+                        </td>
+                    </tr>
+                     <tr>
+                        <td class="player_info">
+                            Возраст :
+                        </td>
+                        <td>
+                            {{ players.age }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="player_info">
+                            Дополнительно :
+                        </td>
+                        <td>
+                            {{ players.inform }}
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+
+                <br>
+
+            </div>
+        </div>
+        <table class="jsnoborders">
+            <tbody>
+            <tr>
+                <td>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!-- //MAIN CONTENT -->
+
+</div>
+
+
+{% endblock %}
